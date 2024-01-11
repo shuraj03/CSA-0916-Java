@@ -1,0 +1,20 @@
+public class NumberPyramidPattern {
+
+    public static void main(String[] args) {
+        int rows = 4; // Customize this for desired number of rows
+
+        for (int i = 1; i <= rows; i++) {
+            // Print leading spaces
+            for (int j = 0; j < rows - i; j++) {
+                System.out.print("  ");
+            }
+
+            // Print increasing numbers
+            for (int j = 0; j < i; j++) {
+                System.out.print(i + " ");
+            }
+
+            System.out.println(); // New line after each row
+        }
+    }
+}
