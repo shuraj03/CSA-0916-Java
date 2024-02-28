@@ -1,0 +1,38 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating a Map to store employee records (Employee ID as key, Employee Name as value)
+        Map<Integer, String> employeeRecords = new HashMap<>();
+
+        // i. Add objects
+        employeeRecords.put(101, "John Doe");
+        employeeRecords.put(102, "Jane Smith");
+        employeeRecords.put(103, "Alice Johnson");
+
+        // Displaying all employee records
+        System.out.println("Employee Records:");
+        for (Map.Entry<Integer, String> entry : employeeRecords.entrySet()) {
+            System.out.println("Employee ID: " + entry.getKey() + ", Employee Name: " + entry.getValue());
+        }
+
+        // ii. Check if the map is empty or not
+        System.out.println("Is the map empty? " + employeeRecords.isEmpty());
+
+        // iii. Remove specified object
+        int employeeIdToRemove = 102;
+        String removedEmployee = employeeRecords.remove(employeeIdToRemove);
+        System.out.println("Removed employee with ID " + employeeIdToRemove + ": " + removedEmployee);
+
+        // Displaying all employee records after removal
+        System.out.println("Employee Records after removal:");
+        for (Map.Entry<Integer, String> entry : employeeRecords.entrySet()) {
+            System.out.println("Employee ID: " + entry.getKey() + ", Employee Name: " + entry.getValue());
+        }
+
+        // iv. Clear the map
+        employeeRecords.clear();
+        System.out.println("Map cleared. Is the map empty now? " + employeeRecords.isEmpty());
+    }
+}
