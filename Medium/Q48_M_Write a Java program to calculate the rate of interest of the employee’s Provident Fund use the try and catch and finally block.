@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        try {
+            System.out.print("Enter employee's basic salary: ");
+            double basicSalary = scanner.nextDouble();
+
+            // Assuming PF rate is 12% of basic salary
+            double pfRate = 0.12;
+            double pfAmount = basicSalary * pfRate;
+            System.out.println("Provident Fund (PF) amount: " + pfAmount);
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        } finally {
+            // Close the scanner
+            if (scanner != null) {
+                scanner.close();
+            }
+        }
+    }
+}
