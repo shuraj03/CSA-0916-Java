@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+        try {
+            // Division by zero causing ArithmeticException
+            int result = 10 / 0;
+
+            // Accessing an element beyond the array size causing ArrayIndexOutOfBoundsException
+            int[] arr = { 1, 2, 3 };
+            int value = arr[5];
+
+            // Accessing a method or field of a null object causing NullPointerException
+            String str = null;
+            int length = str.length();
+        } catch (ArithmeticException | ArrayIndexOutOfBoundsException | NullPointerException e) {
+            System.out.println("Exception caught: " + e);
+        }
+    }
+}
