@@ -1,0 +1,27 @@
+import java.util.Hashtable;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating a Hashtable to maintain bank details (Account number as key, Customer name as value)
+        Hashtable<Integer, String> bankDetails = new Hashtable<>();
+
+        // i) Add 3 records
+        bankDetails.put(123456, "John Doe");
+        bankDetails.put(789012, "Jane Smith");
+        bankDetails.put(345678, "Alice Johnson");
+
+        // ii) Display the size of Hashtable
+        System.out.println("Size of the Hashtable: " + bankDetails.size());
+
+        // Displaying all the records
+        System.out.println("Bank details:");
+        for (Map.Entry<Integer, String> entry : bankDetails.entrySet()) {
+            System.out.println("Account Number: " + entry.getKey() + ", Customer Name: " + entry.getValue());
+        }
+
+        // iii) Clear the Hashtable
+        bankDetails.clear();
+        System.out.println("Hashtable cleared. Size after clearing: " + bankDetails.size());
+    }
+}
