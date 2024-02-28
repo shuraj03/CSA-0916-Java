@@ -1,0 +1,29 @@
+class Box {
+    double length;
+    double width;
+    double height;
+
+    // Default constructor
+    public Box() {
+        // Default values for length, width, and height
+        this.length = 1.0;
+        this.width = 1.0;
+        this.height = 1.0;
+    }
+
+    // Method to calculate and print the volume of the box
+    public void calculateVolume() {
+        double volume = length * width * height;
+        System.out.println("Volume of the box: " + volume);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an object of Box using default constructor
+        Box box = new Box();
+
+        // Calculate and print the volume of the box
+        box.calculateVolume();
+    }
+}
